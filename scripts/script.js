@@ -1,5 +1,7 @@
+// Set Preferences
+
 // space, scary, military, romantic, cowboy, fantasy, superhero
-favoriteMovieGenre("fantasy")
+favoriteMovieGenre("space")
 
 // watermelon, tomato, banana, orange, avocado, blueberry
 favoriteFruit("orange")
@@ -10,20 +12,24 @@ favoriteMode("dark")
 // sharp, soft, round
 favoriteEdgeStyle("round")
 
+// Set CSS Properties
 function setProp(prop, value) {
     document.documentElement.style.setProperty(prop, value)
 }
 
+// Set Edge Styling
 function favoriteEdgeStyle(style) {
     setProp("--image", "var(--" + style + ")");
 }
 
+// Set Font
 function favoriteMovieGenre(font) {
     if (font) {
         setProp("--font", "var(--" + font + ")");    
     }
 }
 
+// Set Mode
 function favoriteMode(mode) {
     if (mode === "light" || !mode) {
         setProp('--background', "var(--light)");
@@ -34,6 +40,7 @@ function favoriteMode(mode) {
     }
 }
 
+// Set Theme
 function favoriteFruit(theme) {
     if (theme === "pastel") {
         setProp('--light', "#f2f6c3")
